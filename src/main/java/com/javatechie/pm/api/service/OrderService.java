@@ -13,8 +13,8 @@ public class OrderService {
 	public OrderResponse checkoutOrder(OrderRequest order) {
 		// call DAO
 		int discount=addDiscount(order);
-		somePrivate(order);
 		order.setPrice(order.getPrice()-discount);
+		showOrderInformation(order);
 		String message = NotificationUtil.sendEmail(order.getEmailId());
 		return new OrderResponse(order, message, HttpStatus.OK.value());
 	}
@@ -35,7 +35,8 @@ public class OrderService {
 		return discountAMount;
 	}
 
-	private void somePrivate(OrderRequest orderRequest) {
-		System.out.println("this is somePrivate method");
+	private void showOrderInformation(OrderRequest orderRequest) {
+		System.out.println("Connecting to screen...");
+		System.out.println(orderRequest.toString());
 	}
 }
