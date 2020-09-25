@@ -1,2 +1,2 @@
 # mock
-Cách phương pháp mock
+Các phương pháp mock
