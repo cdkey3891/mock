@@ -97,4 +97,9 @@ public class PowermockApiApplicationTests {
         //run public method which calls this private method
         spy.checkoutOrder(request);
     }
+
+    @Test
+    public void test() {
+
+    }
 }
